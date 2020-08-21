@@ -29,5 +29,5 @@ bool str_equal(const std::string &trust_str, const std::string &untrusted_str) {
         are_equal |= trust_str[i] ^ untrusted_str[j++];
         i < trust_str_len ? i++ : k++; // replace i++ when it stops incrementing to keep the execution time
     }
-    return are_equal == 0;
+    return are_equal == 0 && trust_str_len == untrustred_str_len;
 }
